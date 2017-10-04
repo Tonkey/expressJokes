@@ -1,0 +1,18 @@
+extends layout
+
+block content
+    h1 Welcome to the "add joke" page!
+    p 
+        | But first, here's a link back to the 
+        a(href='/') Main Page
+        | .
+    form(method='post')
+        div.input
+            input(type="text", name="addJokeField")
+        div.actions
+            input(type="submit", value="add")
+    p 
+        | In case you want to see that the joke was added to the database,
+        br
+        | you can use this link: 
+        a(href='/jokes') Jokes

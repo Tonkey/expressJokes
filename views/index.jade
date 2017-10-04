@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome #{userName}
+  p Here is the available sub-pages:
+  div
+    a(href="/joke") Get a random joke.
+    br
+    a(href="/jokes") Get all available jokes.
+    br
+    a(href="/addJoke") Add a new joke.
+    br
+    a(href="/logout") logout
