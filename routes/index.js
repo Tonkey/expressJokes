@@ -53,7 +53,7 @@ router.get('/login', function(req,res,next){
 
 router.get('/logout', function(req,res,next){
   req.session.userName = jokes.logout()
-  res.redirect('/')
+  res.redirect('/jokeApp/')
 })
 
 module.exports = router;
