@@ -35,14 +35,14 @@ app.use(function (req, res, next) {
     return next();
   } else if (req.body.userName && req.body.userName !== '') {
     req.session.userName = req.body.userName;
-    res.redirect('/');
+    res.redirect('/jokeApp/');
   } else {
-    req.url = "/login"; //We will create this page in the next step
+    req.url = "/jokeApp/login"; //We will create this page in the next step
     return next();
   }
 });
 
-app.use('/', index);
+app.use('/jokeApp', index);
 app.use('/users', users);
 
 // catch 404 and forward to error handler
