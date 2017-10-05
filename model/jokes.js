@@ -15,7 +15,7 @@ function _addJoke(newJoke){
 };
 
 function logout(){
-    return ''
+    return undefined
 }
 
 module.exports = {

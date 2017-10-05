@@ -2,13 +2,10 @@ extends layout
 
 block content
 
-    //- script(src="../cookie_config.js" type="text/javascript")
-    //- script(src="../wel/cookie-consent/consent.js" type="text/javascript")
-
     h1 Login
     form(name="login-form", method="post")
         div.input
             span.label Username:
-            input(type="text", name="userName", placeholder="username")
+            input(type="text", name="userName", placeholder="username", onkeyup="if(this.value.length > 0) document.getElementById('submit').disabled = false; else document.getElementById('submit').disabled = true")
         div.actions
-            input(type="submit", value="add")
+            input(type="submit", value="Login", id='submit' disabled)
